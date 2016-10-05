@@ -15,3 +15,5 @@ RUN cd /tmp/h2o/libuv ; ./autogen.sh && ./configure && make install -j 8
 
 RUN cmake -DWITH_BUNDLED_SSL=on .
 RUN make -j 8 && make install
+
+CMD h2o -c /h2o/h2o.conf
